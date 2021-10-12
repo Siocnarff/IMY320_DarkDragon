@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
+    <img id="logo" alt="Vue logo" src="./assets/DDDLogo.png">
     <HomePage msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -11,7 +11,7 @@ import HomePage from './components/HomePage.vue'
 export default {
   name: 'App',
   components: {
-    HomePage
+    HomePage,
   }
 }
 </script>
@@ -25,4 +25,12 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+#logo{
+  width: 100px;
+  display: inline-flex;
+  position: absolute; left: 50px; top:30px;
+}
+
+
 </style>

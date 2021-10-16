@@ -48,13 +48,13 @@ body,
 }
 
 #DDDHeading{
-  position: absolute; left: 300px; top:40px;
+  position: absolute; left: 400px; top:40px;
   font-size: 50px;
   font-family: 'Spartan',serif;
 }
 
 #Navb{
-  position: absolute; left: 900px; top:40px;
+  position: absolute; left: 1000px; top:40px;
   font-family: 'Spartan',serif;
 }
 

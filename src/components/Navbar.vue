@@ -1,6 +1,6 @@
 <template>
 
-    <ul class="nav">
+    <ul class="nab">
       <li class="nav-item">
         <a class="nav-link active" href="#">Active</a>
       </li>
@@ -9,9 +9,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
       </li>
     </ul>
 
@@ -25,9 +22,8 @@ export default {
 </script>
 
 <style scoped>
-  .nav{
-    position: absolute; left: 100px;
-
+  .nab{
+    position: absolute; left: 200px; top: 20px;
   }
 
   .nav-item{
@@ -37,7 +33,7 @@ export default {
   }
   .nav-link{
     font-family: 'Libre Baskerville',serif;
-    color: red;
+    color: #1A1423;
   }
 
 </style>

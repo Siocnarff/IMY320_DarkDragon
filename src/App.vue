@@ -1,22 +1,29 @@
 <template>
   <div id="app">
     <img id="logo" alt="Vue logo" src="./assets/DDDLogo.png">
+    <div>
+      <Navbar id = "Navb"/>
+    </div>
     <HomePage id="homepage"/>
     <h1 id="DDDHeading">DARK DRAGON DESIGN</h1>
+
+
+
+
   </div>
 </template>
 
 <script>
 import HomePage from './components/HomePage.vue'
+import Navbar from "./components/Navbar";
+
 
 export default {
   name: 'App',
   components: {
-    HomePage
+    HomePage,Navbar
   }
-
 }
-
 
 
 
@@ -41,8 +48,13 @@ body,
 }
 
 #DDDHeading{
-  position: absolute; left: 300px; top:50px;
+  position: absolute; left: 300px; top:40px;
   font-size: 50px;
+  font-family: 'Spartan',serif;
+}
+
+#Navb{
+  position: absolute; left: 900px; top:40px;
   font-family: 'Spartan',serif;
 }
 

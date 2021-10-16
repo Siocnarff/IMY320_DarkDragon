@@ -47,14 +47,14 @@ body,
 }
 
 #DDDHeading{
-  position: absolute; left: 300px; top:40px;
+  position: absolute; left: 300px; top:85px;
   font-size: 50px;
   font-family: 'Spartan',serif;
   font-weight: bold;
 }
 
 #Navb{
-  position: absolute; left: 1200px; top:45px;
+  position: absolute; left: 1200px; top:90px;
   font-family: 'Spartan',serif;
 }
 

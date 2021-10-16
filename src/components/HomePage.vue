@@ -20,7 +20,7 @@
      return {
        items: [
          {title: 'YOUR JAMS', link:  require('../assets/YOUR_JAMS.png')},
-         {title: "FIND YOUR WAY", link: require('../assets/YOUR_JAMS.png')}
+         {title: "FIND YOUR WAY", link: require('../assets/ERP.jpg')}
        ]
 
 
@@ -34,11 +34,13 @@
  <style scoped>
   .demo{
      position: relative; top:100px;
+
    }
 
    .projects{
      list-style-type: none;
      text-align: center;
+     margin-bottom: 30px;
    }
 
    .headings{
@@ -50,5 +52,7 @@
 
    .imgs{
      position: relative; left: 2%;
+     width: 1600px;
+     height: 700px;
    }
  </style>

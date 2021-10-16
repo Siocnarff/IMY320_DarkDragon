@@ -4,10 +4,8 @@
     <div>
       <Navbar id = "Navb"/>
     </div>
-    <HomePage id="homepage"/>
     <h1 id="DDDHeading">DARK DRAGON DESIGN</h1>
-
-
+    <HomePage id="homepage"/>
 
 
   </div>
@@ -52,6 +50,7 @@ body,
   position: absolute; left: 300px; top:40px;
   font-size: 50px;
   font-family: 'Spartan',serif;
+  font-weight: bold;
 }
 
 #Navb{

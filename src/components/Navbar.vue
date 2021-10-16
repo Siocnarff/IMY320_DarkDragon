@@ -29,6 +29,7 @@ export default {
   }
   .nav-link{
     font-family: 'Libre Baskerville',serif;
+    font-style: italic;
     color: #1A1423;
   }
 

@@ -16,8 +16,14 @@
 <script>
 
 export default {
-  name: "Navbar"
+  name: "Navbar",
+  components: {
+
+  }
 }
+
+
+
 </script>
 
 <style scoped>
@@ -28,7 +34,7 @@ export default {
     display:inline-block;
   }
   .nav-link{
-    font-family: 'Libre Baskerville',serif;
+    font-family: 'Libre Baskerville','Mrs Eaves',serif;
     font-style: italic;
     color: #1A1423;
   }

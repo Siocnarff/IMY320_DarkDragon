@@ -55,7 +55,7 @@ body,
 
 #Navb{
   position: absolute; left: 1200px; top:90px;
-  font-family: 'Spartan',serif;
+  font-family: 'Libre Baskerville',serif;
 }
 
 

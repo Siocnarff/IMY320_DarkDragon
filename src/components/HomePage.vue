@@ -5,7 +5,9 @@
 
         <img class="imgs" :src="value.link" :alt="value.link">
         <!---<img src="../assets/YOUR_JAMS.png"/>--->
-
+        <div class="overlay">
+          <h1>hello</h1>
+        </div>
       </li>
      </ul>
 
@@ -40,7 +42,7 @@
    .projects{
      list-style-type: none;
      text-align: center;
-     margin-bottom: 30px;
+     margin-bottom: -600px;
    }
 
    .headings{
@@ -55,4 +57,17 @@
      width: 1600px;
      height: 700px;
    }
+
+  .overlay {
+    position: relative; left: 13.5%; top:-700px;
+    height: 700px;
+    width: 1600px;
+    opacity: 100%;
+    transition: .5s ease;
+    background-color: #30484c;
+  }
+
+
+
+
  </style>

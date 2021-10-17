@@ -8,7 +8,9 @@
           <img class="imgs" :src="value.link" :alt="value.link">
           <!---<img src="../assets/YOUR_JAMS.png"/>--->
           <div class="overlay">
-            <h1>hello</h1>
+            <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>
+            <h1 class="catch_phrase">{{value.catch_phrase}}</h1>
+            <p class="info_text">{{value.text}}</p>
           </div>
         </div>
 
@@ -25,8 +27,10 @@
    data() {
      return {
        items: [
-         {title: 'YOUR JAMS', link:  require('../assets/YOUR_JAMS.png')},
-         {title: "FIND YOUR WAY", link: require('../assets/ERP.jpg')}
+         {title: 'YOUR JAMS', link:  require('../assets/YOUR_JAMS.png'), info_heading:'AI MUSIC RECOMMENDATION', catch_phrase:"Your tunes always lekker"
+         , text:"This app helps you find the music you're into quickly on the go. It learns what you're into and recommends songs you might like, dont worry it learns with you so as your tastes in music changes so will its recommendations.\n"},
+         {title: "FIND YOUR WAY", link: require('../assets/ERP.jpg'), info_heading:'ESCAPE ROOM SIMULATION AND PLANNING',catch_phrase:"Always a way out",
+         text:"Escape Room Planner intends to solve an organisational problem that user’s face when constructing an escape room. The system will allow users to simulate custom escape rooms that can be implemented in the real world"}
        ]
 
 
@@ -77,9 +81,27 @@
   }
 
   .image:hover .overlay{
-    opacity: 0.9;
+    opacity: 0.95;
     left: 710px;
 
+  }
+
+  .headings_for_overlay{
+    opacity: 1;
+    color: #DCE0D9;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .catch_phrase{
+    color: #DCE0D9;
+    margin-bottom: 30px;
+  }
+
+  .info_text{
+    font-size: 20px;
+    color: #DCE0D9;
   }
 
 

@@ -40,7 +40,7 @@
               <h1 class="catch_phrase">{{value.catch_phrase}}</h1>
               <p class="info_text">{{value.text}}</p>
               <i class="fas fa-band-aid"></i>
-              <a :href="value.github_link" >GitHub</a>
+              <a :href="value.github_link" >Link</a>
             </div>
 
           </div>
@@ -64,10 +64,18 @@
        items: [
          {title: 'YOUR JAMS', link:  require('../assets/YOUR_JAMS.png'), info_heading:'AI MUSIC RECOMMENDATION', catch_phrase:"Your tunes always lekker"
          , text:"This app helps you find the music you're into quickly on the go. It learns what you're into and recommends songs you might like, dont worry it learns with you so as your tastes in music changes so will its recommendations.",
-         github_link: "https://github.com/COS301-SE-2021/Escape-Room-Planner"},
+         github_link: "https://github.com/Siocnarff/216Practicals"},
          {title: "FIND YOUR WAY", link: require('../assets/ERP.jpg'), info_heading:'ESCAPE ROOM SIMULATION AND PLANNING',catch_phrase:"Always a way out",
          text:"Escape Room Planner intends to solve an organisational problem that user’s face when constructing an escape room. The system will allow users to simulate custom escape rooms that can be implemented in the real world",
-           github_link: "https://github.com/COS301-SE-2021/Escape-Room-Planner"}
+           github_link: "https://escape-room-planner-front-end.herokuapp.com/"},
+         {title: "DATA SLEUTH", link: require('../assets/DataSlueth.png'), info_heading:'CUSTOM DATA SOURCE SEARCH',catch_phrase:"Searches have never been this good",
+           text:"DataSleuth is a custom data source search system. It aims to provide software developers with a central system from where they can search all the data sources they use for their work. From local files, code repositories, wikis, databases, websites and communication systems, all the way to user specific esoteric data sources that competent software developers can plug into the system for themselves.",
+           github_link: "https://github.com/COS301-SE-2021/Custom-Data-Source-Search"},
+         {title: "EXPLORING THE UNKNOWN", link: require('../assets/Trailer.png'), info_heading:'SOMETHING LURKS IN THE DEEP',catch_phrase:"A dive that will make you shiver",
+           text:"A trailer for THE OLD GODS, brought to you by Dark Dragon Design",
+           github_link: "https://www.youtube.com/watch?v=l3wcsvssn9Y&t=6s&ab_channel=JosuaBotha"}
+
+
        ]
 
 
@@ -133,7 +141,7 @@
    height: 400px;
    width: 100%;
    background-color: #1A1423;
-   margin-bottom: 16%
+   margin-bottom: 19%
  }
 
   .demo{

@@ -3,11 +3,15 @@
       <li class= "projects" v-for="value in items" :key="value.id">
         <p class="headings"> {{ value.title }}</p>
 
-        <img class="imgs" :src="value.link" :alt="value.link">
-        <!---<img src="../assets/YOUR_JAMS.png"/>--->
-        <div class="overlay">
-          <h1>hello</h1>
+
+        <div class="image">
+          <img class="imgs" :src="value.link" :alt="value.link">
+          <!---<img src="../assets/YOUR_JAMS.png"/>--->
+          <div class="overlay">
+            <h1>hello</h1>
+          </div>
         </div>
+
       </li>
      </ul>
 
@@ -52,22 +56,31 @@
      font-family: 'Spartan',serif;
    }
 
-   .imgs{
+   .image{
      position: relative; left: 2%;
+   }
+
+   .imgs{
+
+
      width: 1600px;
      height: 700px;
    }
 
   .overlay {
-    position: relative; left: 13.5%; top:-700px;
+    position: relative; left: 235px; top:-700px;
     height: 700px;
-    width: 1600px;
-    opacity: 100%;
-    transition: .5s ease;
-    background-color: #30484c;
+    width: 1130px;
+    opacity: 0;
+    transition: 1s ease-in;
+    background-color: #1A1423;
   }
 
+  .image:hover .overlay{
+    opacity: 0.9;
+    left: 710px;
 
+  }
 
 
  </style>

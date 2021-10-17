@@ -8,6 +8,7 @@
     <img src="../assets/Main.png" id="header_image">
     <div id="headings">
       <h1 id = "header_heading"><span style="color:#DCE0D9">SOFTWARE FOR THE</span><span style="color:#DB162F"> BRAVE</span> </h1>
+      <p id="header_subtext" >Wherever we need to go...</p>
     </div>
 
   </div>
@@ -68,10 +69,18 @@
 
  <style scoped>
 
+ #header_subtext{
+   position: relative; left: 35%;
+   color: #DCE0D9;
+   font-style: italic;
+   font-size: 20px;
+ }
+
  #headings{
    position: relative; left: 50%; top:-65%;
    width: 25%;
    text-align: left;
+   font-family: 'Libre Baskerville',serif;
  }
 
  #header_heading{

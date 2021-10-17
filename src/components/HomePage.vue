@@ -3,9 +3,17 @@
 </head>
 
 <template>
+  <div class="main">
+  <div id="header">
+    <img src="../assets/Main.png" id="header_image">
+    <div id="headings">
+      <h1 id = "header_heading"><span style="color:#DCE0D9">SOFTWARE FOR THE</span><span style="color:#DB162F"> BRAVE</span> </h1>
+    </div>
+
+  </div>
 
 
-    <ul id="v-for-object" class="demo">
+  <ul id="v-for-object" class="demo">
       <li class= "projects" v-for="value in items" :key="value.id">
         <p class="headings"> {{ value.title }}</p>
 
@@ -19,7 +27,7 @@
               <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>
               <h1 class="catch_phrase">{{value.catch_phrase}}</h1>
               <p class="info_text">{{value.text}}</p>
-              <i class="fa fa-github" style="font-size:48px;color:red"></i>
+              <i class="fas fa-band-aid"></i>
               <a :href="value.github_link" >GitHub</a>
             </div>
 
@@ -29,6 +37,7 @@
       </li>
      </ul>
 
+  </div>
  </template>
 
  <script>
@@ -58,6 +67,31 @@
  </script>
 
  <style scoped>
+
+ #headings{
+   position: relative; left: 50%; top:-65%;
+   width: 25%;
+   text-align: left;
+ }
+
+ #header_heading{
+   font-size: 50px;
+ }
+
+ #header_image{
+   position: relative; right: 19%; top:19%;
+   height: 380px;
+   width: 400px;
+ }
+
+ #header{
+   position: relative; top:70px;
+   height: 400px;
+   width: 100%;
+   background-color: #1A1423;
+   margin-bottom: 50px;
+ }
+
   .demo{
      position: relative; top:100px;
 
@@ -98,7 +132,7 @@
 
   .image:hover .overlay{
     opacity: 0.95;
-    left: 710px;
+    left: 600px;
 
   }
 

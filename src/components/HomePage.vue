@@ -10,6 +10,17 @@
       <h1 id = "header_heading"><span style="color:#DCE0D9">SOFTWARE FOR THE</span><span style="color:#DB162F"> BRAVE</span> </h1>
       <p id="header_subtext" >Wherever we need to go...</p>
     </div>
+    <img src="../assets/Diver.png" id="diver_image">
+
+
+    <div id="size_help">
+      <h1 id="diver_text">The Only Deep Water Developers</h1>
+      <a id="diver_message">With our experience in software development, web design and, get
+        this - wreck diving, we go wherever it is required to go to ensure your
+        software works</a>
+    </div>
+
+
 
   </div>
 
@@ -69,11 +80,35 @@
 
  <style scoped>
 
+ #size_help{
+   position: relative; left: 17%; top:-45%;
+   width: 30%;
+ }
+
+ #diver_message{
+   position: relative; left: 19%; top:-45%;
+ }
+
+ #diver_text{
+  position: relative; left: -3%;
+   color: #372549;
+   font-style: italic;
+   font-family: 'Libre Baskerville',serif;
+   font-size: 30px;
+ }
+
+ #diver_image{
+   position: relative; left: 13%;
+   width: 18%;
+   height:45%;
+ }
+
  #header_subtext{
-   position: relative; left: 35%;
+   position: relative; left: 16%;
    color: #DCE0D9;
    font-style: italic;
-   font-size: 20px;
+   font-size: 30px;
+   font-family: 'Libre Baskerville',serif;
  }
 
  #headings{
@@ -98,7 +133,7 @@
    height: 400px;
    width: 100%;
    background-color: #1A1423;
-   margin-bottom: 50px;
+   margin-bottom: 16%
  }
 
   .demo{

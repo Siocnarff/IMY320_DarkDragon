@@ -8,9 +8,13 @@
           <img class="imgs" :src="value.link" :alt="value.link">
           <!---<img src="../assets/YOUR_JAMS.png"/>--->
           <div class="overlay">
-            <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>
-            <h1 class="catch_phrase">{{value.catch_phrase}}</h1>
-            <p class="info_text">{{value.text}}</p>
+
+            <div class = "center_text">
+              <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>
+              <h1 class="catch_phrase">{{value.catch_phrase}}</h1>
+              <p class="info_text">{{value.text}}</p>
+            </div>
+
           </div>
         </div>
 
@@ -104,5 +108,10 @@
     color: #DCE0D9;
   }
 
+  .center_text{
+    width: 900px;
+    position: relative; left: 10%; top: 8%;
+
+  }
 
  </style>

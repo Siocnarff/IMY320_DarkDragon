@@ -1,35 +1,16 @@
 <template>
   <div id="app">
     <img id="logo" alt="Vue logo" src="./assets/DDDLogo.png">
-    <div>
-      <Navbar id = "Navb"/>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
     <h1 id="DDDHeading">DARK DRAGON DESIGN</h1>
-    <HomePage id="homepage"/>
-
-
+    <router-view/>
   </div>
 </template>
 
-<script>
-import HomePage from './components/HomePage.vue'
-import Navbar from "./components/Navbar";
-
-
-export default {
-  name: 'App',
-  components: {
-    HomePage,Navbar
-  }
-}
-
-
-
-</script>
-
 <style>
-html,
-body,
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -39,6 +20,7 @@ body,
   background-color: #DCE0D9;
   cursor:url(./assets/CursorImg.png), auto;
 }
+
 
 #logo{
   width: 100px;
@@ -53,12 +35,21 @@ body,
   font-weight: bold;
 }
 
+#nav {
+  padding: 30px;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
+}
+
 #Navb{
   position: absolute; left: 1200px; top:90px;
   font-family: 'Libre Baskerville',serif;
 }
-
-
-
-
 </style>

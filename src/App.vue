@@ -1,23 +1,20 @@
 <template>
 
   <div id="app">
-
     <img id="logo" alt="Vue logo" src="./assets/DDDLogo.png">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <div id="navbar">
+        <router-link class="link" to="/">Home </router-link>
+        <router-link class="link" to="/about">About</router-link>
+      </div>
+      <h1 id="DDDHeading">DARK DRAGON DESIGN</h1>
     </div>
-    <h1 id="DDDHeading">DARK DRAGON DESIGN</h1>
     <router-view/>
 
     <div id="footer">
         <Footer></Footer>
     </div>
-
-
   </div>
-
-
 
 
 </template>
@@ -34,14 +31,14 @@
 }
 
 
-#logo{
-  width: 100px;
+#logo {
+  width: 50px;
   display: inline-flex;
   position: absolute; left: 100px; top:30px;
 }
 
 #DDDHeading{
-  position: absolute; left: 300px; top:85px;
+  position: absolute; left: 200px; top:40px;
   font-size: 50px;
   font-family: 'Spartan',serif;
   font-weight: bold;
@@ -57,12 +54,18 @@
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #DB162F;
 }
 
-#Navb{
-  position: absolute; left: 1200px; top:90px;
-  font-family: 'Libre Baskerville',serif;
+#navbar {
+  float: right;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  padding: 30px 50px 30px 30px;
+}
+
+.link {
+  padding-left: 30px;
 }
 
 footer{

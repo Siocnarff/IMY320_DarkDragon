@@ -1,7 +1,14 @@
 <template>
-  <div id="grid">
-    <div id="bottom">Hello World</div>
-    <div>Hello World</div>
+
+  <div id="stoor">
+    <div class="colims1">
+      <p class="storButin" > </p>
+    </div>
+    <div class="colims2">
+
+
+    </div>
+
   </div>
 </template>
 
@@ -12,11 +19,16 @@ export default {
 </script>
 
 <style scoped>
-  #grid {
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-  }
-  #bottom {
-    margin-top: 100px;
-  }
+.storButin{
+  justify-self: end;
+}
+.colims1{
+  grid-template-columns:repeat(1, 1fr);
+}
+.colims2{
+  grid-template-columns:repeat(2, 1fr);
+}
+.colims3{
+  grid-template-columns:repeat(3, 1fr);
+}
 </style>

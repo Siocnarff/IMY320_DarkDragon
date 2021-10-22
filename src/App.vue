@@ -11,7 +11,7 @@
     <router-view/>
 
     <div id="footer">
-
+        <Footer></Footer>
     </div>
 
 
@@ -69,3 +69,9 @@ footer{
 
 }
 </style>
+<script>
+import Footer from "./components/Footer";
+export default {
+  components: {Footer}
+}
+</script>

@@ -146,7 +146,7 @@ export default {
   height: 400px;
   width: 100%;
   background-color: #1A1423;
-  margin-bottom: 22%
+  margin-bottom: 25%
 }
 
 .demo{

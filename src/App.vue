@@ -1,5 +1,7 @@
 <template>
+
   <div id="app">
+
     <img id="logo" alt="Vue logo" src="./assets/DDDLogo.png">
     <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -8,11 +10,11 @@
     <h1 id="DDDHeading">DARK DRAGON DESIGN</h1>
     <router-view/>
 
-    <div>
-      <div class="fluid-container footer">
-        <p class="text-center">Copyright  2018, ABC Marketing. All Rights Reserved.</p>
-      </div>
+    <div id="footer">
+
     </div>
+
+
   </div>
 
 
@@ -28,7 +30,7 @@
   text-align: center;
   background-color: #DCE0D9;
   cursor:url(./assets/CursorImg.png), auto;
-  height: 100%;
+  overflow-y: hidden;
 }
 
 
@@ -61,5 +63,9 @@
 #Navb{
   position: absolute; left: 1200px; top:90px;
   font-family: 'Libre Baskerville',serif;
+}
+
+footer{
+
 }
 </style>

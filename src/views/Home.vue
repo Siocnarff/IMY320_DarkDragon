@@ -49,7 +49,12 @@
       </li>
     </ul>
 
+
+
   </div>
+
+
+
 </template>
 
 <script>
@@ -211,5 +216,4 @@ export default {
   position: relative; left: 10%; top: 8%;
 
 }
-
 </style>

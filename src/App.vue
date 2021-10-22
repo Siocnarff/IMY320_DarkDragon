@@ -8,6 +8,7 @@
       <div id="DDDHeading">
         DARK DRAGON DESIGN
       </div>
+      <div></div>
       <div id="navbar">
         <router-link class="link" to="/">Home</router-link>
         <router-link class="link" to="/about">About</router-link>
@@ -25,6 +26,7 @@
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Spartan:wght@700&display=swap');
 #app {
   font-family: Spartan, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -37,6 +39,7 @@
 
 #logo {
   width: 70px;
+  margin-left: 80px;
 }
 
 #DDDHeading{
@@ -49,9 +52,13 @@
   align-items: center; /* align vertical */
 }
 
+p {
+  font-family: 'pt-serif', sans-serif;
+}
+
 #nav {
   display: grid;
-  grid-template-columns: 2fr 8fr 5fr;
+  grid-template-columns: 2fr max-content auto 5fr;
   height: 150px;
   padding-left: 30px;
   justify-content: center; /* align horizontal */
@@ -59,17 +66,23 @@
 }
 
 #nav a {
-  font-weight: bold;
-  color: #2c3e50;
+  color: #420039;
 }
 
 #nav a.router-link-exact-active {
-  color: #DB162F;
+  color: #12355B;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  color: #420039;
+  text-decoration: none;
 }
 
 #navbar {
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
+  font-weight: lighter;
   font-size: 27px;
   padding: 30px 80px 30px 30px;
 }

@@ -16,7 +16,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-top: 60px;
   background-color: #DCE0D9;
   cursor:url(./assets/CursorImg.png), auto;
 }

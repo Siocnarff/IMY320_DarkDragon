@@ -5,13 +5,13 @@
       <div>
         <img id="logo" src="./assets/DDDLogo.png" alt="DDD">
       </div>
+      <div>
+        <h1 id="DDDHeading">DARK DRAGON DESIGN</h1>
+      </div>
       <div id="navbar">
         <router-link class="link" to="/">Home </router-link>
         <router-link class="link" to="/about">About</router-link>
-        <router-link class="link" to="/about">Merch</router-link>
-      </div>
-      <div>
-        <h1 id="DDDHeading">DARK DRAGON DESIGN</h1>
+        <router-link class="link" to="/merch">Merch</router-link>
       </div>
     </div>
     <router-view/>

@@ -31,9 +31,24 @@
 
     <ul id="v-for-members" class="demo" style="list-style: none;">
       <li class= "members" v-for="value in items" :key="value.id">
-        <p class="member_heading"> {{ value.Name }}</p>
-        <img class="member_images" :src="value.link">
-        <p class="member_info">value.text</p>
+
+        <div class="MemberGrid">
+
+          <p class="member_heading"> {{ value.Name }}</p>
+
+          <ul class="inner_list">
+            <li>
+              <p class="member_info">{{value.text}}</p>
+            </li>
+            <li>
+              <a :href="value.github_link"> <img src="https://img.icons8.com/nolan/64/linkedin.png"/></a>
+            </li>
+          </ul>
+
+          <img class="member_images" :src="value.link">
+
+        </div>
+
       </li>
     </ul>
 
@@ -55,10 +70,10 @@ export default {
       items: [
         {Name: 'Patric Edwards', link:  'https://media-exp1.licdn.com/dms/image/C4E03AQEG3oHulm4myQ/profile-displayphoto-shrink_800_800/0/1630521059987?e=1640217600&v=beta&t=giRZ3lyNN3qGSjffIUQJ7Amq-tnV-TbI3uAjQoJFHcU', info_heading:'AI MUSIC RECOMMENDATION', catch_phrase:"Your tunes always lekker"
           , text:"This app helps you find the music you're into quickly on the go. It learns what you're into and recommends songs you might like, dont worry it learns with you so as your tastes in music changes so will its recommendations.",
-          github_link: "https://github.com/Siocnarff/216Practicals"},
+          github_link: "https://www.linkedin.com/in/patric-edwards-220879204/"},
         {Name: "Josua Botha", link: 'https://media-exp1.licdn.com/dms/image/C5603AQHJ8hQj6tRPwg/profile-displayphoto-shrink_800_800/0/1588325695383?e=1640217600&v=beta&t=XKVLpCBt3LZl5cbLQ952S87Bc0vywbTTUS4quqcKsM4', info_heading:'ESCAPE ROOM SIMULATION AND PLANNING',catch_phrase:"Always a way out",
           text:"Escape Room Planner intends to solve an organisational problem that user’s face when constructing an escape room. The system will allow users to simulate custom escape rooms that can be implemented in the real world",
-          github_link: "https://escape-room-planner-front-end.herokuapp.com/"},
+          github_link: "https://www.linkedin.com/in/josua-botha-63417274/"},
 
 
       ]
@@ -72,6 +87,11 @@ export default {
 </script>
 
 <style>
+
+  .MemberGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 
   .grid1{
     display: grid;
@@ -146,18 +166,28 @@ export default {
     height: 820px;
 
     background-color: #372549;
+    margin-bottom: 5%;
   }
 
   .member_images{
 
     width: 400px;
-    position: relative;
-    left: -40%;
+    align-content: center;
+
   }
   .member_heading{
     font-family: 'Libre Baskerville',serif;
     font-size: 50px;
     color: #372549;
+  }
+
+  .member_info{
+
+  }
+
+  .inner_list{
+    list-style: none;
+    margin-right: 30px;
   }
 
 </style>

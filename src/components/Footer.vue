@@ -1,8 +1,11 @@
 <template>
   <div id="footerid">
 
-    <h1 class="headstyle" id="head">Links to our projects</h1>
-    <h1 class="headstyle" id="Devs">Developers</h1>
+    <div id="grid">
+      <h1 class="headstyle" id="head">Links to our projects</h1>
+      <h1 class="headstyle" id="Devs">Developers</h1>
+    </div>
+
     <div>
       <ul id="for-object" class="list-inline">
         <li class= "ilinks" v-for="value in items" :key="value.id">
@@ -47,13 +50,18 @@ export default {
 
 <style scoped>
 
+#grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 #footerid{
-  position: relative;
+
   height: 200px;
-  width: 100%;
+
   background-color: #1A1423;
   color: #DCE0D9;
-  text-align:center
+
 }
 
 .list-inline{
@@ -62,7 +70,7 @@ export default {
 }
 
 .ilinks{
-  text-align: center;
+
   margin: 10px;
   float: left;
   text-align-last: center;
@@ -77,9 +85,8 @@ export default {
 }
 
 #Devs{
-  position: absolute;
-  left: 90%;
-  top: 0;
+  text-align: right;
+
 
 }
 

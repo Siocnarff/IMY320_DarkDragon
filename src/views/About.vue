@@ -91,6 +91,7 @@ export default {
     left: -10%;
     top: 45%;
     width: 80%;
+    height: 350px;
   }
 
   .about{
@@ -141,7 +142,7 @@ export default {
   #top{
     position: relative;
 
-    width:100%;
+
     height: 820px;
 
     background-color: #372549;

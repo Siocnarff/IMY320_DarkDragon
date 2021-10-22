@@ -1,14 +1,25 @@
 <template>
   <div id="footerid">
 
-    <h1 id="head">Links to our projects</h1>
-    <h1 id="Devs">Developers</h1>
+    <h1 class="headstyle" id="head">Links to our projects</h1>
+    <h1 class="headstyle" id="Devs">Developers</h1>
     <div>
       <ul id="for-object" class="list-inline">
         <li class= "ilinks" v-for="value in items" :key="value.id">
           <a class ="itm" :href="value.github_link"> {{ value.title}}</a>
         </li>
+
+
       </ul>
+      <ul id="Ln-links">
+        <li>
+          <a>Josua Botha<a href="https://www.linkedin.com/in/josua-botha-63417274/"> <img src="https://img.icons8.com/nolan/64/linkedin.png"/></a></a>
+          <a>Patric Edwards<a href="https://www.linkedin.com/in/patric-edwards-220879204/"> <img src="https://img.icons8.com/nolan/64/linkedin.png"/></a></a>
+          <a ><img src="https://img.icons8.com/nolan/64/linkedin.png"/></a>
+        </li>
+      </ul>
+
+
     </div>
   </div>
 </template>
@@ -38,7 +49,7 @@ export default {
 
 #footerid{
   position: relative;
-  height: 100px;
+  height: 200px;
   width: 100%;
   background-color: #1A1423;
   color: #DCE0D9;
@@ -70,6 +81,11 @@ export default {
   left: 90%;
   top: 0;
 
+}
+
+#Ln-links{
+  list-style: none;
+  float: right;
 }
 
 </style>

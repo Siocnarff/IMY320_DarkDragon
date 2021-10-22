@@ -31,7 +31,7 @@
         <div class="image">
           <img :alt="value.link" :src="value.link" class="imgs">
           <!---<img src="../assets/YOUR_JAMS.png"/>--->
-          <div class="overlay ">
+          <div class="overlay">
 
             <div class="center_text">
               <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>
@@ -192,10 +192,6 @@ export default {
 
 .overlay {
   position: relative;
-  left: 235px;
-  top: -700px;
-  height: 700px;
-  width: 1130px;
   opacity: 0;
   transition: 1s ease-in;
   background-color: #1A1423;

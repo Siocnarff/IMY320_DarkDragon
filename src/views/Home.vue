@@ -19,41 +19,28 @@
           this - wreck diving, we go wherever it is required to go to ensure your
           software works</a>
       </div>
-
-
-
     </div>
 
 
     <ul id="v-for-object" class="demo">
-      <li class= "projects" v-for="value in items" :key="value.id">
+      <div class= "projects" v-for="value in items" :key="value.id" >
         <p class="headings"> {{ value.title }}</p>
-
-
         <div class="image">
           <img class="imgs" :src="value.link" :alt="value.link" >
-          <!---<img src="../assets/YOUR_JAMS.png"/>--->
-          <div class="overlay " >
-
-            <div class = "center_text">
-              <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>
-              <h1 class="catch_phrase">{{value.catch_phrase}}</h1>
-              <p class="info_text">{{value.text}}</p>
-              <i class="fas fa-band-aid"></i>
-              <a :href="value.github_link" >Link</a>
-            </div>
-
-          </div>
+<!--          <div class="overlay " >-->
+<!--            <div class = "center_text">-->
+<!--              <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>-->
+<!--              <h1 class="catch_phrase">{{value.catch_phrase}}</h1>-->
+<!--              <p class="info_text">{{value.text}}</p>-->
+<!--              <i class="fas fa-band-aid"></i>-->
+<!--              <a :href="value.github_link" >Link</a>-->
+<!--            </div>-->
+<!--          </div>-->
         </div>
 
-      </li>
+      </div>
     </ul>
-
-
-
   </div>
-
-
 
 </template>
 
@@ -92,7 +79,6 @@ export default {
 </script>
 
 <style scoped>
-
 #size_help{
   position: relative; left: 17%; top:-45%;
   width: 30%;
@@ -125,10 +111,10 @@ export default {
 }
 
 #headings{
-  position: relative; left: 50%; top:-65%;
+  position: relative; left: 50%; top:-80%;
   width: 25%;
   text-align: left;
-  font-family: 'Libre Baskerville',serif;
+  font-family: 'Spartan',serif;
 }
 
 #header_heading{
@@ -137,13 +123,13 @@ export default {
 
 #header_image{
   position: relative; right: 19%; top:19%;
-  height: 380px;
+  height: 500px;
   width: 400px;
 }
 
 #header{
-  position: relative; top:100px;
-  height: 400px;
+  position: relative;
+  height: 450px;
   width: 100%;
   background-color: #1A1423;
   margin-bottom: 25%
@@ -155,9 +141,7 @@ export default {
 }
 
 .projects{
-  list-style-type: none;
-  text-align: center;
-  margin-bottom: -600px;
+  margin-bottom: 300px;
 }
 
 .headings{
@@ -168,20 +152,17 @@ export default {
 }
 
 .image{
-  position: relative; left: 2%;
+  position: relative;
 }
 
 .imgs{
-
-
-  width: 1600px;
-  height: 700px;
+  width: 80%;
 }
 
 .overlay {
-  position: relative; left: 235px; top:-700px;
-  height: 700px;
-  width: 1130px;
+  position: relative; right: 0; top: 0;
+  height: 100%;
+  width: 80%;
   opacity: 0;
   transition: 1s ease-in;
   background-color: #1A1423;

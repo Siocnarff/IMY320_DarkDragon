@@ -3,7 +3,11 @@
 
     <img id="Diver" src="../assets/DiverForAbout.png">
     <h1 id="HeadingStyle"><span style="color: #372549;">The </span><span style="color: #DCE0D9;">Only Deep Water Developers </span></h1>
+     <p class="par" id="p1"> With our experience in software development, web design and, get
+      this - wreck diving, we go wherever it is required to go to ensure your
+      software works.</p>
     <img id="PathFinder" src="../assets/Pf.png">
+    <p class="par" id="p2">Where other teams say there is no way we find a way. No one on our team is scared of a little path finding algorithm.</p>
     <h1 id="PFheading">The Path Finders</h1>
   </div>
 </template>
@@ -33,7 +37,7 @@
   #PFheading{
     position: relative;
     left: 30%;
-    top: 450px;
+    top: 250px;
     margin-bottom: 600px;
     color: #372549;
     font-style: italic;
@@ -49,6 +53,25 @@
     font-style: italic;
     font-family: 'Libre Baskerville',serif;
     font-size: 30px;
+  }
+
+  #p1{
+    position: relative;
+    left: 60%;
+    top: -150px;
+
+  }
+  #p2{
+    position: relative;
+    left: 20%;
+    top: 100px;
+  }
+
+  .par{
+    width: 400px;
+    text-align: left;
+    color: #372549;
+    font-size: 20px;
   }
 
 </style>

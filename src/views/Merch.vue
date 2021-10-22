@@ -1,4 +1,5 @@
 <template>
+
   <div id="stoor">
     <div class="colims1">
       <p class="storButin" > </p>
@@ -7,6 +8,7 @@
 
 
     </div>
+
   </div>
 </template>
 

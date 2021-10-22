@@ -1,17 +1,29 @@
 <template>
   <div class="about">
     <div id="top">
+      <div class="grid1">
+        <div>
+          <img id="Diver" src="../assets/DiverForAbout.png">
+          <h1 id="HeadingStyle"><span style="color: #DB162F;">The </span><span style="color: #DCE0D9;">Only Deep Water Developers </span></h1>
+          <p class="par" id="p1"> With our experience in software development, web design and, get
+            this - wreck diving, we go wherever it is required to go to ensure your
+            software works.</p>
+        </div>
+
+        <div>
+
+          <img id="PathFinder" src="../assets/Pf.png">
+          <p class="par" id="p2">Where other teams say there is no way we find a way. No one on our team is scared of a little path finding algorithm.</p>
+          <h1 id="PFheading">The Path Finders</h1>
+        </div>
+
+      </div>
     </div>
-    <img id="Diver" src="../assets/DiverForAbout.png">
-    <h1 id="HeadingStyle"><span style="color: #DB162F;">The </span><span style="color: #DCE0D9;">Only Deep Water Developers </span></h1>
-    <p class="par" id="p1"> With our experience in software development, web design and, get
-      this - wreck diving, we go wherever it is required to go to ensure your
-      software works.</p>
 
 
-    <img id="PathFinder" src="../assets/Pf.png">
-    <p class="par" id="p2">Where other teams say there is no way we find a way. No one on our team is scared of a little path finding algorithm.</p>
-    <h1 id="PFheading">The Path Finders</h1>
+
+
+
 
     <div>
 
@@ -21,6 +33,7 @@
       <li class= "members" v-for="value in items" :key="value.id">
         <p class="member_heading"> {{ value.Name }}</p>
         <img class="member_images" :src="value.link">
+        <p class="member_info">value.text</p>
       </li>
     </ul>
 
@@ -60,20 +73,25 @@ export default {
 
 <style>
 
+  .grid1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   #Diver{
     position: relative;
-    right:20%;
-    top: 170px;
-    width: 40%;
+    left: 20%;
+    top: 60px;
+    width: 80%;
     height: 400px;
-
   }
 
   #PathFinder{
-    position: absolute;
-    left: 45%;
-    top: 55%;
-    width: 40%;
+    position: relative;
+    left: -10%;
+    top: 45%;
+    width: 80%;
+    height: 350px;
   }
 
   .about{
@@ -83,7 +101,8 @@ export default {
   #PFheading{
     position: relative;
     left: 30%;
-    top: 250px;
+    top: 270px;
+
     margin-bottom: 300px;
     color: #DCE0D9;
     font-style: italic;
@@ -93,9 +112,9 @@ export default {
   }
 
   #HeadingStyle{
-    position: absolute;
-    left: 7.5%;
-    top: 52%;
+    position: relative;
+    left: -6%;
+    top: -3%;
     font-style: italic;
     font-family: 'Libre Baskerville',serif;
     font-size: 30px;
@@ -103,14 +122,14 @@ export default {
 
   #p1{
     position: relative;
-    left: 60%;
-    top: -150px;
+    left: 50%;
+    top:60px;
 
   }
   #p2{
     position: relative;
     left: 20%;
-    top: 100px;
+    top: -130px;
   }
 
   .par{
@@ -121,10 +140,10 @@ export default {
   }
 
   #top{
-    position: absolute;
-    top: 200px;
-    width:100%;
-    height: 850px;
+    position: relative;
+
+
+    height: 820px;
 
     background-color: #372549;
   }

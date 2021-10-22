@@ -189,7 +189,7 @@ export default {
 
 .image:hover .overlay{
   opacity: 0.95;
-  left: 600px;
+  left: 710px;
 
 }
 

@@ -18,7 +18,7 @@
         <li>
           <a>Josua Botha<a href="https://www.linkedin.com/in/josua-botha-63417274/"> <img src="https://img.icons8.com/nolan/64/linkedin.png"/></a></a>
           <a>Patric Edwards<a href="https://www.linkedin.com/in/patric-edwards-220879204/"> <img src="https://img.icons8.com/nolan/64/linkedin.png"/></a></a>
-          <a ><img src="https://img.icons8.com/nolan/64/linkedin.png"/></a>
+          <a>Henco Du Preez<a href="https://www.linkedin.com/in/henco-du-preez-a775bb148/"> <img src="https://img.icons8.com/nolan/64/linkedin.png"/></a></a>
         </li>
       </ul>
 

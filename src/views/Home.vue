@@ -14,7 +14,7 @@
 
 
       <div id="size_help">
-        <h1 id="diver_text">The Only Deep Water Developers</h1>
+        <h1 id="diver_text">Deep Water Developers</h1>
         <a id="diver_message">With our experience in software development, web design and, get
           this - wreck diving, we go wherever it is required to go to ensure your
           software works</a>
@@ -82,18 +82,19 @@ export default {
 #size_help{
   position: relative; left: 17%; top:-45%;
   width: 30%;
+  text-align: left;
 }
 
 #diver_message{
   position: relative; left: 19%; top:-45%;
+  font-family: 'pt-serif', sans-serif;
 }
 
 #diver_text{
   position: relative; left: -3%;
   color: #372549;
-  font-style: italic;
-  font-family: 'Libre Baskerville',serif;
-  font-size: 30px;
+  font-family: 'Spartan',serif;
+  font-size: 37px;
 }
 
 #diver_image{

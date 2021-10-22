@@ -137,11 +137,11 @@ export default {
 }
 
 #header{
-  position: relative; top:70px;
+  position: relative; top:100px;
   height: 400px;
   width: 100%;
   background-color: #1A1423;
-  margin-bottom: 19%
+  margin-bottom: 22%
 }
 
 .demo{

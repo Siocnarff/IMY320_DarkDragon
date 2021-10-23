@@ -15,7 +15,8 @@
         <router-link class="link" to="/merch">Merch</router-link>
       </div>
     </div>
-    <router-view/>
+    <div id="header_padding"></div>
+   <router-view/>
     <div id="footer">
         <Footer></Footer>
     </div>
@@ -57,12 +58,21 @@ p {
 }
 
 #nav {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  /*background-color: #E6EBE0;*/
+  background-color: #E6EBE0;
   display: grid;
   grid-template-columns: 2fr max-content auto 5fr;
   height: 150px;
   padding-left: 30px;
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
+}
+
+#header_padding {
+  height: 150px;
 }
 
 #nav a {

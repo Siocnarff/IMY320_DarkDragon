@@ -24,8 +24,8 @@
         <img class="fade" id="scream" src="../assets/scream.png">
       </div>
       <div id="deep_water">
-        <div id="diver_detail">
-          <h1 class="fade" id="diver_text">DEEP WATER DEVELOPERS</h1>
+        <div class="fade" id="diver_detail">
+          <h1 id="diver_text">DEEP WATER DEVELOPERS</h1>
           <a id="diver_message">With our experience in software development, web design and, get
             this - wreck diving, we go wherever it is required to go to ensure your
             software works</a>
@@ -111,7 +111,7 @@ export default {
   methods: {
     isElemVisible(el) {
       let rect = el.getBoundingClientRect()
-      let elemTop = rect.top + 100 // 200 = buffer
+      let elemTop = rect.top + 200
       let elemBottom = rect.bottom
       return elemTop < window.innerHeight && elemBottom >= 0
     },
@@ -152,6 +152,10 @@ export default {
 
 .fade {
   transition: 2s all ease-out;
+}
+
+.fade_slow {
+  transition: 4s all ease-out;
 }
 
 #horror {

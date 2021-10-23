@@ -100,6 +100,7 @@ export default {
   },
 
   mounted() {
+    gsap.from("#navbar", {duration: 3, delay: 3, ease: "slow", opacity: 0})
     gsap.from("#banner", {duration: 5, ease: "power2", xPercent: 100})
     gsap.from("#header_image", {duration: 3, ease: "slow", scale: 1.3});
     gsap.from("#header_heading", {delay: 2, ease: "power2", duration: 3, opacity: 0, x: 200});

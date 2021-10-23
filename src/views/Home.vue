@@ -4,29 +4,35 @@
 
 <template>
   <div class="main">
-    <div id="header">
-      <img src="../assets/Main.png" id="header_image">
-      <div id="headings">
-        <h1 id = "header_heading"><span style="color:#DCE0D9">SOFTWARE FOR THE</span><span style="color:#DB162F"> BRAVE</span> </h1>
-        <p id="header_subtext" >Wherever we need to go...</p>
+    <div>
+      <div id="banner">
       </div>
-      <img src="../assets/Diver.png" id="diver_image">
-
-
-      <div id="size_help">
-        <h1 id="diver_text">Deep Water Developers</h1>
-        <a id="diver_message">With our experience in software development, web design and, get
-          this - wreck diving, we go wherever it is required to go to ensure your
-          software works</a>
+      <div id="header_container">
+        <div id="header_image">
+          <img src="../assets/Main.png" alt="liftoff">
+        </div>
+        <div id="headings">
+          <h1 id = "header_heading"><span style="color:#DCE0D9">SOFTWARE FOR THE</span><span style="color:#DB162F"> BRAVE</span> </h1>
+          <p id="header_subtext" >Wherever we need to go...</p>
+        </div>
+      </div>
+      <div id="deep_water">
+        <div id="diver_detail">
+          <h1 id="diver_text">DEEP WATER DEVELOPERS</h1>
+          <a id="diver_message">With our experience in software development, web design and, get
+            this - wreck diving, we go wherever it is required to go to ensure your
+            software works</a>
+        </div>
+        <div>
+          <img id="diver_image" src="../assets/Diver.png" alt="Diver1">
+        </div>
       </div>
     </div>
 
-
-    <ul id="v-for-object" class="demo">
-      <div class= "projects" v-for="value in items" :key="value.id" >
-        <p class="headings"> {{ value.title }}</p>
-        <div class="image">
-          <img class="imgs" :src="value.link" :alt="value.link" >
+    <div class= "projects" v-for="value in items" :key="value.id" >
+      <p class="headings"> {{ value.title }}</p>
+      <div class="image">
+        <img class="imgs" :src="value.link" :alt="value.link" >
 <!--          <div class="overlay " >-->
 <!--            <div class = "center_text">-->
 <!--              <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>-->
@@ -36,17 +42,15 @@
 <!--              <a :href="value.github_link" >Link</a>-->
 <!--            </div>-->
 <!--          </div>-->
-        </div>
-
       </div>
-    </ul>
+
+    </div>
   </div>
 
 </template>
 
 <script>
-
-
+import { gsap } from "gsap";
 export default {
   name: "HomePage",
 
@@ -54,24 +58,52 @@ export default {
   data() {
     return {
       items: [
-        {title: 'YOUR JAMS', link:  require('../assets/YOUR_JAMS.png'), info_heading:'AI MUSIC RECOMMENDATION', catch_phrase:"Your tunes always lekker"
-          , text:"This app helps you find the music you're into quickly on the go. It learns what you're into and recommends songs you might like, dont worry it learns with you so as your tastes in music changes so will its recommendations.",
-          github_link: "https://github.com/Siocnarff/216Practicals"},
-        {title: "FIND YOUR WAY", link: require('../assets/ERP.jpg'), info_heading:'ESCAPE ROOM SIMULATION AND PLANNING',catch_phrase:"Always a way out",
-          text:"Escape Room Planner intends to solve an organisational problem that user’s face when constructing an escape room. The system will allow users to simulate custom escape rooms that can be implemented in the real world",
-          github_link: "https://escape-room-planner-front-end.herokuapp.com/"},
-        {title: "DATA SLEUTH", link: require('../assets/DataSlueth.png'), info_heading:'CUSTOM DATA SOURCE SEARCH',catch_phrase:"Searches have never been this good",
-          text:"DataSleuth is a custom data source search system. It aims to provide software developers with a central system from where they can search all the data sources they use for their work. From local files, code repositories, wikis, databases, websites and communication systems, all the way to user specific esoteric data sources that competent software developers can plug into the system for themselves.",
-          github_link: "https://github.com/COS301-SE-2021/Custom-Data-Source-Search"},
-        {title: "EXPLORING THE UNKNOWN", link: require('../assets/Trailer.png'), info_heading:'SOMETHING LURKS IN THE DEEP',catch_phrase:"A dive that will make you shiver",
-          text:"A trailer for THE OLD GODS, brought to you by Dark Dragon Design",
-          github_link: "https://www.youtube.com/watch?v=l3wcsvssn9Y&t=6s&ab_channel=JosuaBotha"}
+        {
+          title: 'YOUR JAMS',
+          link: require('../assets/YOUR_JAMS.png'),
+          info_heading: 'AI MUSIC RECOMMENDATION',
+          catch_phrase: "Your tunes always lekker"
+          ,
+          text: "This app helps you find the music you're into quickly on the go. It learns what you're into and recommends songs you might like, dont worry it learns with you so as your tastes in music changes so will its recommendations.",
+          github_link: "https://github.com/Siocnarff/216Practicals"
+        },
+        {
+          title: "FIND YOUR WAY",
+          link: require('../assets/ERP.jpg'),
+          info_heading: 'ESCAPE ROOM SIMULATION AND PLANNING',
+          catch_phrase: "Always a way out",
+          text: "Escape Room Planner intends to solve an organisational problem that user’s face when constructing an escape room. The system will allow users to simulate custom escape rooms that can be implemented in the real world",
+          github_link: "https://escape-room-planner-front-end.herokuapp.com/"
+        },
+        {
+          title: "DATA SLEUTH",
+          link: require('../assets/DataSlueth.png'),
+          info_heading: 'CUSTOM DATA SOURCE SEARCH',
+          catch_phrase: "Searches have never been this good",
+          text: "DataSleuth is a custom data source search system. It aims to provide software developers with a central system from where they can search all the data sources they use for their work. From local files, code repositories, wikis, databases, websites and communication systems, all the way to user specific esoteric data sources that competent software developers can plug into the system for themselves.",
+          github_link: "https://github.com/COS301-SE-2021/Custom-Data-Source-Search"
+        },
+        {
+          title: "EXPLORING THE UNKNOWN",
+          link: require('../assets/Trailer.png'),
+          info_heading: 'SOMETHING LURKS IN THE DEEP',
+          catch_phrase: "A dive that will make you shiver",
+          text: "A trailer for THE OLD GODS, brought to you by Dark Dragon Design",
+          github_link: "https://www.youtube.com/watch?v=l3wcsvssn9Y&t=6s&ab_channel=JosuaBotha"
+        }
 
 
       ]
 
 
     }
+  },
+
+  mounted() {
+    gsap.from("#header_image", {duration: 2, opacity: 0, y: 300});
+    gsap.from("#header_heading", {delay: 1, duration: 3, opacity: 0, x: 200});
+    gsap.from("#header_subtext", {delay: 1.5, duration: 2, opacity: 0, y: 100});
+    gsap.from("#deep_water", {delay: 3, duration: 2, opacity: 0, y: 300});
   }
 }
 
@@ -79,28 +111,24 @@ export default {
 </script>
 
 <style scoped>
-#size_help{
-  position: relative; left: 17%; top:-45%;
-  width: 30%;
+
+#deep_water {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 300px;
+  padding-bottom: 150px;
   text-align: left;
 }
 
 #diver_message{
-  position: relative; left: 19%; top:-45%;
+  padding-left: 100px;
   font-family: 'pt-serif', sans-serif;
 }
 
 #diver_text{
-  position: relative; left: -3%;
   color: #372549;
   font-family: 'Spartan',serif;
   font-size: 37px;
-}
-
-#diver_image{
-  position: relative; left: 13%;
-  width: 18%;
-  height:45%;
 }
 
 #header_subtext{
@@ -112,8 +140,10 @@ export default {
 }
 
 #headings{
-  position: relative; left: 50%; top:-80%;
-  width: 25%;
+  margin-top: 150px;
+  margin-right: 100px;
+  position: relative;
+  width: 500px;
   text-align: left;
   font-family: 'Spartan',serif;
 }
@@ -123,17 +153,24 @@ export default {
 }
 
 #header_image{
-  position: relative; right: 19%; top:19%;
+  position: relative; right: -380px; top: 80px;
   height: 500px;
   width: 400px;
 }
 
-#header{
-  position: relative;
+#banner{
+  position: absolute;
   height: 450px;
   width: 100%;
   background-color: #1A1423;
-  margin-bottom: 25%
+}
+
+#header_container {
+  z-index: -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  margin-bottom: 180px;
 }
 
 .demo{

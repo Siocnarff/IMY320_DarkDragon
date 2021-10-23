@@ -96,7 +96,6 @@ footer{
 }
 </style>
 <script>
-
 import Footer from "./components/Footer";
 export default {
   components: {Footer}

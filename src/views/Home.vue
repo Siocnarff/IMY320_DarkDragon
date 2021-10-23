@@ -100,10 +100,11 @@ export default {
   },
 
   mounted() {
-    gsap.from("#header_image", {duration: 2, opacity: 0, y: 300});
-    gsap.from("#header_heading", {delay: 1, duration: 3, opacity: 0, x: 200});
-    gsap.from("#header_subtext", {delay: 1.5, duration: 2, opacity: 0, y: 100});
-    gsap.from("#deep_water", {delay: 3, duration: 2, opacity: 0, y: 300});
+    gsap.from("#banner", {duration: 5, ease: "power2", xPercent: 100})
+    gsap.from("#header_image", {duration: 3, ease: "slow", scale: 1.3});
+    gsap.from("#header_heading", {delay: 2, ease: "power2", duration: 3, opacity: 0, x: 200});
+    gsap.from("#header_subtext", {delay: 2.5, ease: "power2", duration: 2, opacity: 0, y: 100});
+    gsap.from("#deep_water", {delay: 4.5, ease: "power2", duration: 3, opacity: 0, y: 300});
   }
 }
 

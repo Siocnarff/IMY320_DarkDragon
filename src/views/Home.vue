@@ -19,9 +19,13 @@
       <div id="horror" >
         <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 0 24 24" width="96px" fill="#F9C80E"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
       </div>
+      <div id="scream_box" >
+        <div class="fade" id="scream_text">DON'T SCREAM <br><span style="color: #F9C80E">WE KNOW HOW TO FIX IT</span></div>
+        <img class="fade" id="scream" src="../assets/scream.png">
+      </div>
       <div id="deep_water">
         <div id="diver_detail">
-          <h1 id="diver_text">DEEP WATER DEVELOPERS</h1>
+          <h1 class="fade" id="diver_text">DEEP WATER DEVELOPERS</h1>
           <a id="diver_message">With our experience in software development, web design and, get
             this - wreck diving, we go wherever it is required to go to ensure your
             software works</a>
@@ -33,9 +37,9 @@
     </div>
 
     <div class= "projects" v-for="value in items" :key="value.id" >
-      <p class="headings"> {{ value.title }}</p>
+      <p class="headings fade"> {{ value.title }}</p>
       <div class="image">
-        <img class="imgs" :src="value.link" :alt="value.link" >
+        <img class="fade imgs" :src="value.link" :alt="value.link" >
 <!--          <div class="overlay " >-->
 <!--            <div class = "center_text">-->
 <!--              <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>-->
@@ -60,6 +64,8 @@ export default {
   el: '#v-for-object',
   data() {
     return {
+      fadeInElements: [],
+      visible: false,
       items: [
         {
           title: 'YOUR JAMS',
@@ -102,6 +108,26 @@ export default {
     }
   },
 
+  methods: {
+    isElemVisible(el) {
+      let rect = el.getBoundingClientRect()
+      let elemTop = rect.top + 100 // 200 = buffer
+      let elemBottom = rect.bottom
+      return elemTop < window.innerHeight && elemBottom >= 0
+    },
+
+    handleScroll() {
+      for (let i = 0; i < this.fadeInElements.length; i++) {
+        let elem = this.fadeInElements[i]
+        if (this.isElemVisible(elem)) {
+          elem.style.opacity = '1'
+          elem.style.transform = 'scale(1)'
+          this.fadeInElements.splice(i, 1) // only allow it to run once
+        }
+      }
+    }
+  },
+
   mounted() {
     gsap.from("#banner", {duration: 5, ease: "power2", xPercent: 100})
     gsap.from("#header_image", {duration: 3, ease: "slow", scale: 1.3});
@@ -111,6 +137,11 @@ export default {
     gsap.from("#navbar", {duration: 3, delay: 3, ease: "slow", opacity: 0});
     gsap.from("#horror", {duration: 3, delay: 4, ease: "bounce", opacity: 0, y: -100});
     // gsap.from("#deep_water", {delay: 4.5, ease: "power2", duration: 3, opacity: 0, y: 300});
+
+    this.fadeInElements = Array.from(document.getElementsByClassName('fade'));
+
+    document.addEventListener('scroll', this.handleScroll)
+    this.handleScroll()
   }
 }
 
@@ -118,6 +149,10 @@ export default {
 </script>
 
 <style scoped>
+
+.fade {
+  transition: 2s all ease-out;
+}
 
 #horror {
   height: 150px;
@@ -174,6 +209,23 @@ export default {
   height: 500px;
   width: 100%;
   background-color: #1A1423;
+}
+
+#scream_box {
+  text-align: left;
+}
+
+#scream {
+  position: relative; top: -100px;
+  width: 100%;
+}
+
+#scream_text {
+  color: #DB162F;
+  font-family: Spartan, serif;
+  font-size: 57px;
+  z-index: 1;
+  position: relative; top: 350px; left: 250px
 }
 
 #header_container {

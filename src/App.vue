@@ -33,7 +33,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #DCE0D9;
+  background-color: #F5F9E9;
   /*cursor:url(./assets/CursorImg.png), auto;*/
 }
 
@@ -62,7 +62,7 @@ p {
   width: 100%;
   z-index: 100;
   /*background-color: #E6EBE0;*/
-  background-color: #E6EBE0;
+  background-color: #F5F9E9;
   display: grid;
   grid-template-columns: 2fr max-content auto 5fr;
   height: 150px;
@@ -76,16 +76,17 @@ p {
 }
 
 #nav a {
-  color: #420039;
+  font-weight: bold;
+  color: #F9C710;
 }
 
 #nav a.router-link-exact-active {
-  color: #12355B;
   text-decoration: none;
 }
 
 #nav a:hover {
-  color: #420039;
+  color: #4363EF;
+  font-weight: normal;
   text-decoration: none;
 }
 

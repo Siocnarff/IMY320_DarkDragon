@@ -13,11 +13,11 @@
         </div>
         <div id="headings">
           <h1 id = "header_heading"><span style="color:#DCE0D9">SOFTWARE FOR THE</span><span style="color:#DB162F"> BRAVE</span> </h1>
-          <p id="header_subtext" >We build beautiful software - out there in the danger zone...</p>
+          <p id="header_subtext" >We build beautiful <span style="color: #F9C80E">{</span> software <span style="color: #F9C80E">}</span> - out there in the danger zone <span style="color: #F9C80E">&lt;/br&gt;</span></p>
         </div>
       </div>
-      <div id="horror">
-        <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 0 24 24" width="96px" fill="#420039"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
+      <div id="horror" >
+        <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 0 24 24" width="96px" fill="#F9C80E"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
       </div>
       <div id="deep_water">
         <div id="diver_detail">
@@ -107,7 +107,7 @@ export default {
     gsap.from("#header_image", {duration: 3, ease: "slow", scale: 1.3});
     gsap.from("#header_heading", {delay: 2, ease: "power2", duration: 3, opacity: 0, x: 200});
     gsap.from("#header_subtext", {delay: 2.5, ease: "power2", duration: 2, opacity: 0, y: 100});
-    gsap.from("#nav", {delay: 5, duration: 2, backgroundColor: "#DCE0D9"})
+    gsap.from("#nav", {delay: 5, duration: 2, backgroundColor: "#F5F9E9"})
     gsap.from("#navbar", {duration: 3, delay: 3, ease: "slow", opacity: 0});
     gsap.from("#horror", {duration: 3, delay: 4, ease: "bounce", opacity: 0, y: -100});
     // gsap.from("#deep_water", {delay: 4.5, ease: "power2", duration: 3, opacity: 0, y: 300});

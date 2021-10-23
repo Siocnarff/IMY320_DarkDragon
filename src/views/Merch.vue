@@ -4,10 +4,10 @@
       <p class="storButin"></p>
     </div>
     <div class="colims2">
-      <img class="item1" src="src/assets/logo_shert_1.png"  alt=""/>
-      <img class="item2" src="src/assets/logo_shert_404.png"  alt=""/>
-      <img class="item1p" src="src/assets/add_black_24dp_2.png"  alt=""/>
-      <img class="item2p" src="src/assets/add_black_24dp_2.png"  alt=""/>
+      <img class="item1" src="../assets/logo_shert_1.png"  alt=""/>
+      <img class="item2" src="../assets/logo_shert_404.png"  alt=""/>
+      <img class="item1p" src="../assets/add_black_24dp_2.png"  alt=""/>
+      <img class="item2p" src="../assets/add_black_24dp_2.png"  alt=""/>
     </div>
   </div>
 </template>

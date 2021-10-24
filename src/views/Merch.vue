@@ -62,9 +62,10 @@ div.itemh {
   justify-self: stretch;
   background-color: #1A1423;
   color: rgb(220, 224, 217);
+  border-radius: 50px;
 }
 div.itemh:hover {
-  opacity: 1;
+  opacity: 0.75;
 }
 .storButin {
   justify-self: end;

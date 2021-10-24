@@ -1,41 +1,43 @@
 <template>
   <div id="stoor">
-    <div class="colims2">
-      <p class="storButin"></p>
+    <div class="colims1">
+      <p  class="storButin">Cart</p>
+      <p id="cartnum">
+
+      </p>
     </div>
     <div class="colims2">
       <div class="blok3x3">
         <img class="item" src="../assets/logo_shert_1.png" alt="" />
-        <div class="itemp">
-          <img src="../assets/add_black_24dp_2.png" alt="" />
-        </div>
         <div class="itemh">
-          <h1>
-            R6000
-          </h1>
+          <h1>R6000</h1>
+        </div>
+        <div  id="S1" class="itemp">
+          <img src="../assets/add_black_24dp_2.png" alt="" />
         </div>
       </div>
       <div class="blok3x3">
         <img class="item" src="../assets/logo_shert_404.png" alt="" />
-        <div class="itemp">
-          <img src="../assets/add_black_24dp_2.png" alt="" />
-        </div>
         <div class="itemh">
-          <h1>
-            R6000
-          </h1>
+          <h1>R6000</h1>
+        </div>
+        <div id="S2" class="itemp">
+          <img src="../assets/add_black_24dp_2.png" alt="" />
         </div>
       </div>
     </div>
+    
   </div>
 </template>
 
 <script>
+
+// require("..\\assets\\store.js");
 export default {
   name: "Merch.vue",
 };
-</script>
 
+</script>
 <style scoped>
 .blok3x3 {
   display: grid;
@@ -60,7 +62,7 @@ div.itemh {
   opacity: 0;
   align-self: stretch;
   justify-self: stretch;
-  background-color: #1A1423;
+  background-color: #1a1423;
   color: rgb(220, 224, 217);
   border-radius: 50px;
 }
@@ -68,11 +70,24 @@ div.itemh:hover {
   opacity: 0.75;
 }
 .storButin {
+  font-weight: bold;
   justify-self: end;
+  color: #1a1423;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 27px;
+}
+.cartnum {
+  font-weight: bold;
+  justify-self: end;
+  color: #a51313;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 27px;
 }
 .colims1 {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 80%;
   justify-content: center;
 }
 .colims2 {

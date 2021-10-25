@@ -27,6 +27,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Spartan:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Spartan:wght@700&family=Ubuntu+Mono&display=swap');
 #app {
   font-family: Spartan, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -36,7 +37,6 @@
   overflow-x: hidden;
   /*cursor:url(./assets/CursorImg.png), auto;*/
 }
-
 
 #logo {
   width: 70px;

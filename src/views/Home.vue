@@ -24,36 +24,44 @@
       </div>
       <div id="scream_box" >
         <div class="fade" id="scream_text">DON'T SCREAM <br><span style="color: #F9C80E">WE KNOW HOW TO FIX IT</span></div>
+        <pre class="fade" id="terminal">
+          $ sudo apt install solutions
+          $ ===================================
+          $ ...installed!
+          $ with full stack experience in advanced enterprise systems
+          $ and diving experience in the waters of africa
+          $ we bring specialized solutions to the deep water software industry
+        </pre>
         <img class="fade" id="scream" src="../assets/scream.png">
       </div>
-      <div id="deep_water">
-        <div class="fade" id="diver_detail">
-          <h1 id="diver_text">DEEP WATER DEVELOPERS</h1>
-          <a id="diver_message">With our experience in software development, web design and, get
-            this - wreck diving, we go wherever it is required to go to ensure your
-            software works</a>
-        </div>
-        <div>
-          <img id="diver_image" src="../assets/Diver.png" alt="Diver1">
-        </div>
+<!--      <div id="deep_water">-->
+<!--        <div class="fade" id="diver_detail">-->
+<!--          <h1 id="diver_text">DEEP WATER DEVELOPERS</h1>-->
+<!--          <a id="diver_message">With our experience in software development, web design and, get-->
+<!--            this - wreck diving, we go wherever it is required to go to ensure your-->
+<!--            software works</a>-->
+<!--        </div>-->
+<!--        <div>-->
+<!--          <img id="diver_image" src="../assets/Diver.png" alt="Diver1">-->
+<!--        </div>-->
+<!--      </div>-->
+      <div class="fade header left" id="past_projects">
+        PAST PROJECTS
       </div>
     </div>
 
     <div class= "projects" v-for="value in items" :key="value.id" >
       <p class="headings fade"> {{ value.title }}</p>
       <div class="image">
+        <div style="margin-left: 250px; text-align: left; color: #1A1423; opacity: 0.8; width: 40%">
+          <h1 class="fade">{{ value.info_heading }}</h1>
+          <h1 class="fade">{{value.catch_phrase}}</h1>
+          <p class="fade">{{value.text}}</p>
+          <i class="fade fa-band-aid"></i>
+          <a class="fade" style="font-family: 'Libre Baskerville', serif; font-size: 27px; font-style: italic; color: #4363EF; margin-left: 20px; padding-bottom: 20px" :href="value.github_link" >More Detail...</a>
+        </div>
         <img class="fade imgs" :src="value.link" :alt="value.link" >
-<!--          <div class="overlay " >-->
-<!--            <div class = "center_text">-->
-<!--              <h1 class="headings_for_overlay">{{ value.info_heading }}</h1>-->
-<!--              <h1 class="catch_phrase">{{value.catch_phrase}}</h1>-->
-<!--              <p class="info_text">{{value.text}}</p>-->
-<!--              <i class="fas fa-band-aid"></i>-->
-<!--              <a :href="value.github_link" >Link</a>-->
-<!--            </div>-->
-<!--          </div>-->
       </div>
-
     </div>
   </div>
 
@@ -164,7 +172,6 @@ export default {
         .from("#header_subtext", {ease: "power2", duration: 2, opacity: 0, y: 100}, 5)
         .from("#horror", {duration: 3, ease: "bounce", opacity: 0, y: -150}, 8.5);
 
-
     this.fadeInElements = Array.from(document.getElementsByClassName('fade'));
 
     document.addEventListener('scroll', this.handleScroll)
@@ -176,6 +183,20 @@ export default {
 </script>
 
 <style scoped>
+
+#badlama {
+  border-radius: 20%;
+}
+
+.left {
+  margin-left: 250px;
+  text-align: left;
+}
+
+.header {
+  font-size: 57px;
+  font-family: Spartan,serif;
+}
 
 .fade {
   transition: 2s all ease-out;
@@ -251,8 +272,19 @@ export default {
 }
 
 #scream {
-  position: relative; top: -100px;
+  position: relative; top: -250px;
   width: 100%;
+}
+
+#past_projects {
+  width: 250px;
+  margin-bottom: 200px;
+}
+
+#terminal {
+  position: relative; top: 380px; left: 320px;
+  z-index: 1;
+  color: #F9C80E;
 }
 
 #scream_text {
@@ -260,7 +292,7 @@ export default {
   font-family: Spartan, serif;
   font-size: 57px;
   z-index: 1;
-  position: relative; top: 350px; left: 250px
+  position: relative; top: 250px; left: 250px
 }
 
 #header_container {
@@ -277,7 +309,7 @@ export default {
 }
 
 .projects{
-  margin-bottom: 300px;
+  margin-bottom: 280px;
 }
 
 .headings{

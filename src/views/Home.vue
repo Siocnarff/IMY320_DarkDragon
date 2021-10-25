@@ -17,6 +17,9 @@
         </div>
       </div>
       <div id="horror" >
+        <span id="down_message">
+          DIVE DOWN
+        </span>
         <svg xmlns="http://www.w3.org/2000/svg" height="96px" viewBox="0 0 24 24" width="96px" fill="#F9C80E"><path d="M24 24H0V0h24v24z" fill="none" opacity=".87"/><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"/></svg>
       </div>
       <div id="scream_box" >
@@ -58,6 +61,7 @@
 
 <script>
 import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
 export default {
   name: "HomePage",
 
@@ -65,6 +69,7 @@ export default {
   data() {
     return {
       fadeInElements: [],
+      fadeOutElements: [],
       visible: false,
       items: [
         {
@@ -116,25 +121,48 @@ export default {
       return elemTop < window.innerHeight && elemBottom >= 0
     },
 
+    isElemLeaving(el) {
+      let rect = el.getBoundingClientRect();
+      let elemBottom = rect.bottom;
+      return elemBottom < 450;
+    },
+
     handleScroll() {
       for (let i = 0; i < this.fadeInElements.length; i++) {
-        let elem = this.fadeInElements[i]
+        let elem = this.fadeInElements[i];
         if (this.isElemVisible(elem)) {
-          elem.style.opacity = '1'
-          elem.style.transform = 'scale(1)'
-          this.fadeInElements.splice(i, 1) // only allow it to run once
+          gsap.to(elem, {opacity: 1, scale: 1});
+          // elem.style.opacity = '1';
+          // elem.style.transform = 'scale(1)';
+          this.fadeInElements.splice(i, 1); // only allow it to run once
+          this.fadeOutElements.push(elem);
+        }
+      }
+      for (let k = 0; k < this.fadeOutElements.length; k++) {
+        let elem = this.fadeOutElements[k];
+        if (this.isElemLeaving(elem)) {
+          console.log(elem.getBoundingClientRect().bottom)
+          gsap.to(elem, {opacity: 0, ease: "slow"});
+          // elem.style.opacity = '0';
+          // elem.style.transform = 'scale(0.8)';
+          this.fadeOutElements.splice(k, 1);
+          this.fadeInElements.push(elem);
         }
       }
     }
   },
 
   mounted() {
-    let tl = gsap.timeline({delay: 0.5})
-    tl.from("#banner", {duration: 5, ease: "power2", xPercent: 100}, 0)
-        .from("#header_image", {duration: 3, ease: "slow", opacity: 0, scale: 1.3}, 0)
-        .from("#header_heading", {ease: "power2", duration: 3, opacity: 0, x: 200}, 2)
-        .from("#header_subtext", {ease: "power2", duration: 2, opacity: 0, y: 100}, 2.5)
-        .from("#horror", {duration: 3, ease: "bounce", opacity: 0, y: -100}, 3);
+    gsap.registerPlugin(TextPlugin);
+    let tl = gsap.timeline({delay: 1})
+    tl  .from("#logo", {duration: 1, scale: 1.03, ease: "power2", opacity: 0})
+        .from("#DDDHeading", {text: "", duration: 2.8, delimiter: " "}, 0)
+        .from("#navbar", {duration: 2, ease: "power2", opacity: 0}, 2)
+        .from("#banner", {duration: 6, ease: "power2", xPercent: 100}, 3)
+        .from("#header_image", {duration: 2.8, ease: "slow", scale: 1.2, opacity: 0}, 4)
+        .from("#header_heading", {ease: "power2", duration: 3, opacity: 0, x: 200}, 4.5)
+        .from("#header_subtext", {ease: "power2", duration: 2, opacity: 0, y: 100}, 5)
+        .from("#horror", {duration: 3, ease: "bounce", opacity: 0, y: -150}, 8.5);
 
 
     this.fadeInElements = Array.from(document.getElementsByClassName('fade'));
@@ -159,6 +187,10 @@ export default {
 
 #horror {
   height: 150px;
+}
+
+#down_message {
+  opacity: 0.3;
 }
 
 #deep_water {

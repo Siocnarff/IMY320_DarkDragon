@@ -96,7 +96,7 @@ export default {
     let tl = gsap.timeline({delay: 0.5});
     tl  .from("#Diver", {duration: 4, x: -120, opacity: 0}, 2)
         .from("#PathFinder", {duration: 4.3, x: 120, opacity: 0}, 3)
-        .from("#HeadingStyle", {opacity: 0, x: -40, duration: 4.5}, 0)
+        .from("#HeadingStyle", {opacity: 0, scale: 0.98, x: -40, duration: 4.5}, 0)
         .from("#PFheading", {duration: 2.5, x: 220, opacity: 0}, 3.8)
         .from(".par", {duration: 2, opacity: 0}, 6)
   }
@@ -123,7 +123,6 @@ export default {
     left: 20%;
     top: 60px;
     width: 80%;
-    height: 400px;
   }
 
   #PathFinder{
@@ -153,7 +152,7 @@ export default {
   #HeadingStyle{
     position: relative;
     left: 15px;
-    top: -150px;
+    top: -300px;
     font-family: 'Spartan',serif;
     font-size: 57px;
   }
@@ -161,7 +160,7 @@ export default {
   #p1{
     position: relative;
     left: 40%;
-    top:60px;
+    top: -10px;
 
   }
   #p2{
@@ -171,6 +170,7 @@ export default {
   }
 
   .par{
+    opacity: 0.5;
     width: 500px;
     text-align: left;
     color: #F5F9E9;

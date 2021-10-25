@@ -2,8 +2,8 @@
   <div id="footerid">
 
     <div id="grid">
-      <h1 class="headstyle" id="head">Links to our projects</h1>
-      <h1 class="headstyle" id="Devs">Developers</h1>
+      <h1 class="headstyle" id="head">LINKS TO OUR <span style="color: #DB162F">PROJECTS</span></h1>
+      <h1 class="headstyle" id="Devs" style="color: #F9C80E">Developers</h1>
     </div>
 
     <div>
@@ -57,11 +57,13 @@ export default {
 
 #footerid{
 
-  height: 200px;
+  height: 400px;
 
   background-color: #1A1423;
   color: #DCE0D9;
 
+
+  padding: 140px 50px 20px;
 }
 
 .list-inline{
@@ -77,7 +79,10 @@ export default {
 }
 
 .itm{
-  color: #DCE0D9;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  opacity: 70%;
+  color: #4363EF;
 }
 
 #head{

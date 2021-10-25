@@ -46,21 +46,21 @@
 <!--        </div>-->
 <!--      </div>-->
       <div class="fade header left" id="past_projects">
-        PAST PROJECTS
+        <span style="color: #F9C80E">P</span>A<span style="color: #DB162F">S</span>T <span style="color: #F9C80E">P</span>ROJECT<span style="color: #DB162F">S</span>
       </div>
     </div>
 
     <div class= "projects" v-for="value in items" :key="value.id" >
       <p class="headings fade"> {{ value.title }}</p>
       <div class="image">
+        <img class="fade imgs" :src="value.link" :alt="value.link" >
         <div style="margin-left: 250px; text-align: left; color: #1A1423; opacity: 0.8; width: 40%">
           <h1 class="fade">{{ value.info_heading }}</h1>
-          <h1 class="fade">{{value.catch_phrase}}</h1>
+          <h1 class="fade" style="color: #F9C80E">{{value.catch_phrase}}</h1>
           <p class="fade">{{value.text}}</p>
           <i class="fade fa-band-aid"></i>
           <a class="fade" style="font-family: 'Libre Baskerville', serif; font-size: 27px; font-style: italic; color: #4363EF; margin-left: 20px; padding-bottom: 20px" :href="value.github_link" >More Detail...</a>
         </div>
-        <img class="fade imgs" :src="value.link" :alt="value.link" >
       </div>
     </div>
   </div>
@@ -324,6 +324,7 @@ export default {
 }
 
 .imgs{
+  margin-bottom: 50px;
   width: 80%;
 }
 

@@ -129,14 +129,13 @@ export default {
   },
 
   mounted() {
-    gsap.from("#banner", {duration: 5, ease: "power2", xPercent: 100})
-    gsap.from("#header_image", {duration: 3, ease: "slow", scale: 1.3});
-    gsap.from("#header_heading", {delay: 2, ease: "power2", duration: 3, opacity: 0, x: 200});
-    gsap.from("#header_subtext", {delay: 2.5, ease: "power2", duration: 2, opacity: 0, y: 100});
-    gsap.from("#nav", {delay: 5, duration: 2, backgroundColor: "#F5F9E9"})
-    gsap.from("#navbar", {duration: 3, delay: 3, ease: "slow", opacity: 0});
-    gsap.from("#horror", {duration: 3, delay: 4, ease: "bounce", opacity: 0, y: -100});
-    // gsap.from("#deep_water", {delay: 4.5, ease: "power2", duration: 3, opacity: 0, y: 300});
+    let tl = gsap.timeline({delay: 0.5})
+    tl.from("#banner", {duration: 5, ease: "power2", xPercent: 100}, 0)
+        .from("#header_image", {duration: 3, ease: "slow", opacity: 0, scale: 1.3}, 0)
+        .from("#header_heading", {ease: "power2", duration: 3, opacity: 0, x: 200}, 2)
+        .from("#header_subtext", {ease: "power2", duration: 2, opacity: 0, y: 100}, 2.5)
+        .from("#horror", {duration: 3, ease: "bounce", opacity: 0, y: -100}, 3);
+
 
     this.fadeInElements = Array.from(document.getElementsByClassName('fade'));
 

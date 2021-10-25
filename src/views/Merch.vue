@@ -5,8 +5,20 @@
       <li class= "members" v-for="value in items" :key="value.id">
 
         <div class="MerchGrid">
-          <img  v-if="items.index % 2 === 0" :src="value.link " class="merchImgleft">
-          <img  v-else :src="value.link " class="merchImgRight">
+
+          <ul>
+
+            <li>
+              <img   :src="value.link " class="merchImgleft">
+            </li>
+          </ul>
+
+          <ul>
+            <li>
+              <img   :src="value.link2 " class="merchImgRight">
+            </li>
+
+          </ul>
 
 
         </div>
@@ -23,29 +35,30 @@ export default {
   name: "Merch.vue",
   el: '#v-for-merch',
   data() {
+
     return {
       items: [
         {
-          index: 1,
+
           Name: 'Shirt1',
-          link: require('../assets/Shirt1.png'),
+          link: require('../assets/Shirt1.png')
+          ,Name2: 'Shirt2',
+        link2: require('../assets/Shirt2.png')
+
         },
         {
-          index: 2,
+
           Name: 'Shirt1',
-          link: require('../assets/Shirt1.png'),
+          link: require('../assets/Shirt1.png')
+          ,Name2: 'Shirt2',
+          link2: require('../assets/Shirt2.png')
+
         },
-        {
-          index: 3,
-          Name: 'Shirt1',
-          link: require('../assets/Shirt1.png'),
-        },
-        {
-          index: 4,
-          Name: 'Shirt1',
-          link: require('../assets/Shirt1.png'),
-        }
       ]
+    }
+  },methods:{
+    LeftImg(){
+
     }
   }
 
@@ -55,13 +68,15 @@ export default {
 <style scoped>
 
 .MerchGrid{
+  padding-top: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr ;
-  padding-bottom: 20px;
+  padding-bottom: 5%;
 }
 
 .merchImgleft{
-  margin-left: 50%;
+  margin-top: 10%;
+  margin-left: 20%;
 }
 
 .merchImgRight{

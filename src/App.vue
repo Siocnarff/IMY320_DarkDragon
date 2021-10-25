@@ -8,7 +8,6 @@
       <div id="DDDHeading">
         DARK DRAGON DESIGN
       </div>
-      <div></div>
       <div id="navbar">
         <router-link class="link" to="/">Home</router-link>
         <router-link class="link" to="/about">About</router-link>
@@ -34,13 +33,14 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-color: #F5F9E9;
+  overflow-x: hidden;
   /*cursor:url(./assets/CursorImg.png), auto;*/
 }
 
 
 #logo {
   width: 70px;
-  margin-left: 80px;
+  margin-left: 100px;
 }
 
 #DDDHeading{
@@ -49,7 +49,6 @@
   font-weight: bold;
   display: flex;
   padding-top: 6px;
-  justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
 }
 
@@ -64,7 +63,7 @@ p {
   /*background-color: #E6EBE0;*/
   background-color: #F5F9E9;
   display: grid;
-  grid-template-columns: 2fr max-content auto 5fr;
+  grid-template-columns: 20% 50% 30%;
   height: 150px;
   padding-left: 30px;
   justify-content: center; /* align horizontal */
@@ -85,7 +84,6 @@ p {
 }
 
 #nav a:hover {
-  color: #4363EF;
   font-weight: normal;
   text-decoration: none;
 }
@@ -93,6 +91,7 @@ p {
 #navbar {
   font-family: 'Libre Baskerville', serif;
   font-style: italic;
+  text-align: center;
   font-weight: lighter;
   font-size: 27px;
   padding: 30px 80px 30px 30px;

@@ -4,7 +4,7 @@
       <div class="grid1">
         <div>
           <img id="Diver" src="../assets/DiverForAbout.png">
-          <h1 id="HeadingStyle"><span style="color: #DB162F;">The </span><span style="color: #DCE0D9;">Only Deep Water Developers </span></h1>
+          <h1 id="HeadingStyle"><span style="color: #F9C80E; opacity: 0.7">The Only Deep <span style="color: #DB162F;">Water</span> Developers</span></h1>
           <p class="par" id="p1"> With our experience in software development, web design and, get
             this - wreck diving, we go wherever it is required to go to ensure your
             software works.</p>
@@ -13,7 +13,7 @@
         <div>
 
           <img id="PathFinder" src="../assets/Pf.png">
-          <p class="par" id="p2">Where other teams say there is no way we find a way. No one on our team is scared of a little path finding algorithm.</p>
+          <p class="par" id="p2">Where other teams say there is no way, we find a way. No one on our team is scared of a little path finding algorithm.</p>
           <h1 id="PFheading">The Path Finders</h1>
         </div>
 
@@ -59,7 +59,8 @@
 </template>
 
 <script>
-
+import { gsap } from "gsap";
+import { TextPlugin } from "gsap/TextPlugin";
 
 export default {
   name: "AboutPage",
@@ -83,6 +84,20 @@ export default {
 
 
     }
+  },
+
+  methods: {
+
+  },
+
+  mounted() {
+    gsap.registerPlugin(TextPlugin);
+    let tl = gsap.timeline({delay: 0.5});
+    tl  .from("#Diver", {duration: 4, x: -120, opacity: 0}, 2)
+        .from("#PathFinder", {duration: 4.3, x: 120, opacity: 0}, 3)
+        .from("#HeadingStyle", {opacity: 0, x: -40, duration: 4.5}, 0)
+        .from("#PFheading", {duration: 2.5, x: 220, opacity: 0}, 3.8)
+        .from(".par", {duration: 2, opacity: 0}, 6)
   }
 }
 
@@ -94,6 +109,7 @@ export default {
   .MemberGrid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 20px;
   }
 
   .grid1{
@@ -123,29 +139,27 @@ export default {
 
   #PFheading{
     position: relative;
-    left: 30%;
-    top: 270px;
+    top: 230px;
 
     margin-bottom: 300px;
-    color: #DCE0D9;
-    font-style: italic;
-    font-family: 'Libre Baskerville',serif;
-    font-size: 30px;
+    color: #F9C80E;
+    opacity: 0.9;
+    font-family: 'Spartan',serif;
+    font-size: 57px;
 
   }
 
   #HeadingStyle{
     position: relative;
-    left: -6%;
-    top: -3%;
-    font-style: italic;
-    font-family: 'Libre Baskerville',serif;
-    font-size: 30px;
+    left: 15px;
+    top: -150px;
+    font-family: 'Spartan',serif;
+    font-size: 57px;
   }
 
   #p1{
     position: relative;
-    left: 50%;
+    left: 40%;
     top:60px;
 
   }
@@ -156,32 +170,31 @@ export default {
   }
 
   .par{
-    width: 400px;
+    width: 500px;
     text-align: left;
-    color: #DCE0D9;
-    font-size: 20px;
+    color: #F5F9E9;
+    font-style: italic;
+    font-family: "Libre Baskerville", serif;
+    font-size: 27px;
   }
 
   #top{
     position: relative;
-
-
-    height: 820px;
-
-    background-color: #372549;
+    height: 880px;
+    background-color: #1A1423;
     margin-bottom: 5%;
   }
 
   .member_images{
-
     width: 400px;
     align-content: center;
+    border-radius: 10px;
 
   }
   .member_heading{
-    font-family: 'Libre Baskerville',serif;
+    font-family: 'Spartan',serif;
     font-size: 50px;
-    color: #372549;
+    color: #F9C80E;
   }
 
   .member_info{

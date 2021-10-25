@@ -5,6 +5,9 @@
       <li class= "members" v-for="value in items" :key="value.id">
 
         <div class="MerchGrid">
+          <img  v-if="items.index % 2 === 0" :src="value.link " class="merchImgleft">
+          <img  v-else :src="value.link " class="merchImgRight">
+
 
         </div>
       </li>
@@ -23,6 +26,22 @@ export default {
     return {
       items: [
         {
+          index: 1,
+          Name: 'Shirt1',
+          link: require('../assets/Shirt1.png'),
+        },
+        {
+          index: 2,
+          Name: 'Shirt1',
+          link: require('../assets/Shirt1.png'),
+        },
+        {
+          index: 3,
+          Name: 'Shirt1',
+          link: require('../assets/Shirt1.png'),
+        },
+        {
+          index: 4,
           Name: 'Shirt1',
           link: require('../assets/Shirt1.png'),
         }
@@ -37,8 +56,20 @@ export default {
 
 .MerchGrid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   padding-bottom: 20px;
+}
+
+.merchImgleft{
+  margin-left: 50%;
+}
+
+.merchImgRight{
+  margin-right: 20%;
+}
+
+.demo{
+
 }
 
 </style>

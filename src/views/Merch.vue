@@ -99,7 +99,7 @@ export default {
 }
 
 .merchImgleft{
-  margin-top: 15%;
+  margin-top: 18%;
   margin-left: 10%;
 
 }
@@ -108,7 +108,7 @@ export default {
 
 .merchImgRight{
   margin-top: 5%;
-  margin-right: 20%;
+  margin-right: 23%;
 }
 
 .demo{

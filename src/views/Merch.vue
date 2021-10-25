@@ -35,6 +35,10 @@
 // require("..\\assets\\store.js");
 export default {
   name: "Merch.vue",
+
+  mounted() {
+    window.scrollTo(0, 0);
+  }
 };
 
 </script>

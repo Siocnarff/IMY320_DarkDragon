@@ -161,6 +161,7 @@ export default {
   },
 
   mounted() {
+    window.scrollTo(0, 0);
     gsap.registerPlugin(TextPlugin);
     let tl = gsap.timeline({delay: 1})
     tl  .from("#logo", {duration: 1, scale: 1.03, ease: "power2", opacity: 0})

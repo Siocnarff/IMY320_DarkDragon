@@ -91,6 +91,7 @@ export default {
   },
 
   mounted() {
+    window.scrollTo(0, 0);
     gsap.registerPlugin(TextPlugin);
     let tl = gsap.timeline({delay: 0.5});
     tl  .from("#Diver", {duration: 4, x: -120, opacity: 0}, 2)

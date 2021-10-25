@@ -1,58 +1,102 @@
 <template>
   <div id="stoor">
     <div class="colims1">
-      <p class="storButin"></p>
+      <p  class="storButin">Cart</p>
+      <p id="cartnum">
+
+      </p>
     </div>
     <div class="colims2">
-      <img class="item1" src="src/assets/logo_shert_1.png"  alt=""/>
-      <img class="item2" src="src/assets/logo_shert_404.png"  alt=""/>
-      <img class="item1p" src="src/assets/add_black_24dp_2.png"  alt=""/>
-      <img class="item2p" src="src/assets/add_black_24dp_2.png"  alt=""/>
+      <div class="blok3x3">
+        <img class="item" src="../assets/logo_shert_1.png" alt="" />
+        <div class="itemh">
+          <h1>R6000</h1>
+        </div>
+        <div  id="S1" class="itemp">
+          <img src="../assets/add_black_24dp_2.png" alt="" />
+        </div>
+      </div>
+      <div class="blok3x3">
+        <img class="item" src="../assets/logo_shert_404.png" alt="" />
+        <div class="itemh">
+          <h1>R6000</h1>
+        </div>
+        <div id="S2" class="itemp">
+          <img src="../assets/add_black_24dp_2.png" alt="" />
+        </div>
+      </div>
     </div>
+    
   </div>
 </template>
 
 <script>
+
+// require("..\\assets\\store.js");
 export default {
   name: "Merch.vue",
 };
-</script>
 
+</script>
 <style scoped>
-.item1 {
-  grid-column-start: 1;
-  grid-column-end: 2;
+.blok3x3 {
+  display: grid;
+  grid-template-columns: 3fr, 1fr, 2fr;
+  grid-template-rows: 3fr, 1fr, 2fr;
+}
+.item {
+  grid-area: 1/1/4/4;
   justify-self: stretch;
+  align-self: stretch;
 }
-.item2 {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  justify-self: stretch;
+.itemp {
+  grid-area: 3/3/4/4;
+  align-self: end;
+  justify-self: end;
 }
-.item1p {
+div.itemh {
+  grid-row-start: 1;
   grid-column-start: 1;
-  grid-column-end: 2;
-  justify-self: end;
-  align-self: end;
+  grid-row-end: 4;
+  grid-column-end: 4;
+  opacity: 0;
+  align-self: stretch;
+  justify-self: stretch;
+  background-color: #1a1423;
+  color: rgb(220, 224, 217);
+  border-radius: 50px;
 }
-.item2p {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  justify-self: end;
-  align-self: end;
+div.itemh:hover {
+  opacity: 0.75;
 }
 .storButin {
+  font-weight: bold;
   justify-self: end;
+  color: #1a1423;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 27px;
+}
+.cartnum {
+  font-weight: bold;
+  justify-self: end;
+  color: #a51313;
+  font-family: "Libre Baskerville", serif;
+  font-style: italic;
+  font-size: 27px;
 }
 .colims1 {
-  grid-template-columns: repeat(1, 1fr);
+  display: grid;
+  grid-template-columns: 80%;
   justify-content: center;
 }
 .colims2 {
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: minmax(40%, 100px) minmax(40%, 100px);
   justify-content: center;
 }
 .colims3 {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-content: center;
 }
